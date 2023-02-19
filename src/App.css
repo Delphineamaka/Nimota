@@ -1,35 +1,38 @@
-.pro__file,
+ 
 .intern,
 .pro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 .pro{  
-  margin: 0.5rem 25rem 1rem ;
+   
+  background-color: #1B7C6B;
+  padding: 2rem;
+  border-radius: 2%;
+  width: 50%;
+  margin-left: 20rem;
+  margin-top: 2rem;
    
 }
 
-.img__profile {
-  border-radius: 10px;
-}
+ 
  .intern{
   background-color: #fff;
-  padding: 1rem 6rem 1rem 2rem ;
+ margin: 0.5rem 20rem 1rem 20rem;
   border-top: 10px solid #1B7C6B;
+  padding: 0 11rem 0 0;
   border-radius: 10px;
-  max-width: 37%; 
- margin-left: 22.5rem;
-   
+  width: 50%;  
  }
  .Input{
   outline: none;
  border-left: hidden;
  border-top: hidden;
  border-right:hidden ;
-    padding: 2rem 6rem 0 0;
  font-size: 1rem;
   background: none;
   border-bottom:   0.1px solid gray;
@@ -37,6 +40,7 @@
 
  }
  .Input:focus,
+ .cover:focus
   .input:active{
     border-bottom: 2px solid #1B7C6B;
     transition: 0.1s ease-in;
@@ -49,29 +53,35 @@
  .field{
     background-color: #fff;
     padding: 1rem 6rem 1rem 2rem;
+    width: 50%;
     font-size: 18px;
     border-radius: 10px;
-    max-width: 37%;
-    margin:1rem 0 0 22.5rem;
+   margin: 0.5rem 20rem 1rem 20rem;
  }
  div span{
   color: red;
+  font-size: 22px;
  }
+
  .letter {
    background-color: #fff;
    padding: 2rem 6rem 1rem 2rem;
    font-size: 18px;
    border-radius: 10px;
-   max-width: 37%;
-   margin: 1rem 0 0 22.5rem;
+  width: 50%;
+  margin-left: 20rem
  }
 
  .cover{
-   /* background-color: #fff; */
+ 
     padding: 2rem 0 0 0.5rem;
    border-bottom: 1px solid gray;
    resize: none;
    overflow: hidden;
+    outline: none;
+    border-left: hidden;
+    border-top: hidden;
+    border-right:hidden;
  }
  
  .field input{
@@ -136,6 +146,51 @@ padding: 1rem 24rem 1rem 1rem;
   border: none;
   
  }
- 
- 
+  
+ @media only screen and (max-width: 700px) {
+  .name,
+  .email,
+  .fone,
+  .field,
+  .intern{
+    
+       font-size: 16px;
+       margin: 12px;
+       font-size: 14px;
+        padding: 2rem 0 1rem 1rem;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+   }
+   .letter,
+   .cover{
+    width: 100%;
+    margin: 1rem;
+     align-items: center;
+     justify-content: center;
+     padding:  2rem 0 1rem 1rem;
+   }
+     .pro{
+      width: 100%;
+      margin-left: 1rem;
+       align-items: center;
+       justify-content: center;
+     }
+   .img__profile{
+     height: 42px;
+   }
+   
+   .btn{
+    display: flex;
+    justify-content: space-between;
+    margin:1rem 0 0 2rem;
+    padding: 2rem;
+     
+   }
+   .submit{
+     height: 30px;
+     font-size: 12px;
+   }
+  }  
+    
  

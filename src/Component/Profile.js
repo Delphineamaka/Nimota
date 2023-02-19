@@ -1,17 +1,17 @@
 import React from 'react'
-import nmotaa from './Asset/nmotaa.jpg'
+import img1 from './Asset/img1.png'
 
 
 
  function Profile() {
   return (
-	<div  className = 'pro__file' >
-	<div div className = 'pro' >
-	  <img src={nmotaa}  alt='nimota img' className='img__profile'/>
+	 
+	<div className ='pro'>
+	  <img src={img1}  alt='nimota img' className='img__profile'/>
 	</div>
    
  
-	</div>
+	 
   )
 }
 

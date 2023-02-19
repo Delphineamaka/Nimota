@@ -92,7 +92,7 @@ function Forms() {
 			<label>Submit your cover letter</label> <br />
 			 
 			<textarea 
-			 className='cover Input'
+			 className='cover'
 			 name='cLetter'
 			 value={contact.cLetter}
 			rows='4'

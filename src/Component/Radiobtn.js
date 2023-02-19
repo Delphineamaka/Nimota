@@ -85,18 +85,12 @@ function Radiobtn() {
 		</div> <br />
 
 		<div>
-			 <input 
-			 type='radio'
-			  value='Other:' 
-			name='other'
-		 
+			 <input type='radio'
+			value='Other:' 
 			required
-		  checked={currentRadioValue === 'other'}
-		  onChange={handleChange}
-		//   onClick={() =>{
-        //    setIsSet(true)
-		//   }}
-	    //  style={{borderBottom: isSet ? '3px solid #1B7C6B' : '1px solid gray'}}
+			 onChange={handleChange}
+		    checked={currentRadioValue === '0ther:'}
+		
 		  /> 
 		 <label>Other:</label> 
 		</div> 
