@@ -1,196 +1,195 @@
  
-.intern,
-.pro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   
-}
+     .App {
+       display: flex;
+      margin: 0.8rem 28rem 0.6rem 25rem;
+       align-items: center;  
+       justify-content: center;
+       font-size: 18px;
+       line-height: 1;
+       width: 40rem;
 
-.pro{  
-   
-  background-color: #1B7C6B;
-  padding: 2rem;
-  border-radius: 2%;
-  width: 50%;
-  margin-left: 20rem;
-  margin-top: 2rem;
-   
-}
-
+     }
  
- .intern{
-  background-color: #fff;
- margin: 0.5rem 20rem 1rem 20rem;
-  border-top: 10px solid #1B7C6B;
-  padding: 0 11rem 0 0;
-  border-radius: 10px;
-  width: 50%;  
- }
- .Input{
-  outline: none;
- border-left: hidden;
- border-top: hidden;
- border-right:hidden ;
- font-size: 1rem;
-  background: none;
-  border-bottom:   0.1px solid gray;
-   
+   .name,
+   .email,
+   .fone,
+   .field,
+   .letter{
+     background-color: #fff;
+     padding: 8px 30% 36px 38px;
+      margin: 1rem;
+     border-radius: 10px;
+     width: 40rem;
+     
+   }
 
+   .intern__heading{
+  
+      text-align: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1;
+   }
+
+  img{
+    height: 100px;
+  }
+
+  .class{
+  border-top: 10px solid #1B7C6B;
+    padding: 2px 40px 7px 40px; 
+  height: 150px;
+  width: 39.9rem;
+ 
+  margin-left: 25rem;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #fff;
  }
- .Input:focus,
- .cover:focus
-  .input:active{
-    border-bottom: 2px solid #1B7C6B;
-    transition: 0.1s ease-in;
+ 
+  input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+  .field input {
+    margin: 8px 20px 8px 0;
   }
  
-  
- .name,
- .email,
- .fone,
- .field{
-    background-color: #fff;
-    padding: 1rem 6rem 1rem 2rem;
-    width: 50%;
-    font-size: 18px;
+  .cover{
+  width: 57%;
+     resize: none;
+     overflow: hidden;
+     outline: none;
+     border-left: hidden;
+     border-top: hidden;
+     border-right:hidden;
+       
+  }
+  .pro {
+
+    background-color: #1E2F97;
+    padding: 1.5rem 8rem;
     border-radius: 10px;
-   margin: 0.5rem 20rem 1rem 20rem;
- }
- div span{
-  color: red;
-  font-size: 22px;
- }
+    margin: 0.5rem;
+   width: 42rem;
 
- .letter {
-   background-color: #fff;
-   padding: 2rem 6rem 1rem 2rem;
-   font-size: 18px;
-   border-radius: 10px;
-  width: 50%;
-  margin-left: 20rem
- }
-
- .cover{
- 
-    padding: 2rem 0 0 0.5rem;
-   border-bottom: 1px solid gray;
-   resize: none;
-   overflow: hidden;
+  }
+  .Input {
     outline: none;
     border-left: hidden;
     border-top: hidden;
-    border-right:hidden;
- }
- 
- .field input{
-  margin: 1rem;
- }
-
-  .Input:placeholder-shown{
+    border-right: hidden;
     font-size: 1rem;
+    background: none;
+    border-bottom: 0.1px solid gray;
+
+
+  }
+  .Input:focus,
+  .cover:focus,
+
+  .Input:active {
+    border-bottom: 2px solid #1B7C6B;
+    transition: 0.1s ease-in;
   }
 
-input[type='radio']:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #d1d3d1;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
-}
-
-input[type='radio']:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #1B7C6B;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
-}
-   
- .btn{
-display: flex;
-justify-content: space-between;
- margin:1rem 0 0 22.5rem;
-padding: 1rem 24rem 1rem 1rem;
- }
-
-
- .submit{
-  color: #FFFFFF;
-  background-color: #1B7C6B;
-  border-radius: 15px;
-  height: 50px;
-  font-size: 18px;
-  border: none;
-   padding: 8px 38px;
- 
- 
- }
- .reset{
-  color: #1B7C6B;
-  font-size: 1rem;
-  outline: none;
-  border: none;
+  .span {
+    color: red;
+    font-size: 22px;
+  }
   
- }
+
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1B7C6B;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
   
- @media only screen and (max-width: 700px) {
-  .name,
-  .email,
-  .fone,
-  .field,
-  .intern{
-    
-       font-size: 16px;
-       margin: 12px;
-       font-size: 14px;
-        padding: 2rem 0 1rem 1rem;
-       width: 100%;
-       align-items: center;
-       justify-content: center;
-   }
-   .letter,
-   .cover{
-    width: 100%;
-    margin: 1rem;
-     align-items: center;
-     justify-content: center;
-     padding:  2rem 0 1rem 1rem;
-   }
-     .pro{
-      width: 100%;
-      margin-left: 1rem;
-       align-items: center;
-       justify-content: center;
-     }
-   .img__profile{
-     height: 42px;
-   }
+  .btn {
    
-   .btn{
     display: flex;
     justify-content: space-between;
-    margin:1rem 0 0 2rem;
-    padding: 2rem;
-     
-   }
-   .submit{
-     height: 30px;
-     font-size: 12px;
-   }
-  }  
-    
+    padding: 22px;
  
+
+  }
+  .reset {
+    color: #1B7C6B;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: none;
+
+  }
+  .submit {
+    color: #FFFFFF;
+    background-color: #1B7C6B;
+    border-radius: 15px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    padding: 8px 38px;
+
+
+  }
+  /* @media  screen and (max-width: 760px) {
+     .class {
+       border-top: px solid #1B7C6B;
+       padding: 70px 10px 72px 20px;
+       font-size: 16px;
+       height: 100px;
+       width: 100%;
+       margin: 4px 4px;
+       background: #fff;
+     }
+      .pro {
+
+        background-color: #1E2F97;
+        padding: 1rem 6rem 1rem;
+         border-radius: 10px;
+       margin: 0.5rem;
+        width: 100%;
+
+      }
+     
+  }
+  @media screen and (min-width:768px) and(max-width: 1024px) {
+    .class {
+      border-top: px solid #1B7C6B;
+      padding: 70px 10px 72px 20px;
+      font-size: 16px;
+      height: 100px;
+      width: 100%;
+      margin: 4px 4px;
+      background: #fff;
+    }
+
+    .pro {
+
+      background-color: #1E2F97;
+      padding: 1rem 6rem 1rem;
+      border-radius: 10px;
+      margin: 0.5rem;
+      width: 100%;
+
+    }
+  }
+  */

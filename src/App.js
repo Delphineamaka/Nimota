@@ -6,7 +6,7 @@ import Profile from './Component/Profile';
 
 function App() {
   return (
-    <div className="Profile">
+    <div  >
     <Profile />
     <Form />
    <Forms />

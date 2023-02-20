@@ -23,10 +23,11 @@ function Forms() {
 
 
 
- function submitClick(e){
+ function submitClick (){
 	console.log('form submitted');
-	e.preventDefault();
+	// event.preventDefault();
  }
+ 
  function clearForm(){
 	setContact({
 		yName: '',
@@ -40,10 +41,10 @@ function Forms() {
   
  
   return (
-	<div className='forms' >
+	<div className=' App ' >
 	<form >
 	    <div className='name'>
-			<h4>Name <span>*</span></h4>
+			<h5>Name <span className='span'>*</span></h5>
 			<label>First and last name</label> <br />
 			<input 
 			className='Input'
@@ -59,7 +60,7 @@ function Forms() {
 		</div>
 
 		 <div className='email'>
-			<label>Email <span>*</span></label> <br />
+			<label>Email <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
 			name='email'
@@ -74,7 +75,7 @@ function Forms() {
 		 </div>
 
 		 <div className='fone'>
-			<label>phone number  <span>*</span></label> <br />
+			<label>phone number  <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
 			name='telephone'
@@ -88,7 +89,8 @@ function Forms() {
 			 
 		 </div>
         <Radiobtn />
-		 <div className='letter'>
+
+		 <div  className = ' letter' >
 			<label>Submit your cover letter</label> <br />
 			 
 			<textarea 
@@ -98,12 +100,12 @@ function Forms() {
 			rows='4'
 			cols='50'
 			required  
-           placeholder='your cover letter'
+            placeholder='your cover letter'
 			onChange={handleChange}
 			/>
 		 </div> 
 		 <div className='btn'>
-			<input type='submit' className='submit' onClick={submitClick}submit /> 
+			<button type='submit' className='submit'onClick={submitClick} >Submit</button>
 			 
 				
 			
