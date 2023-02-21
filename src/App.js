@@ -1,16 +1,16 @@
 import './App.css';
-import Form from './Component/Form';
+// import Form from './Component/Form';
 import Forms from './Component/Forms';
 import Profile from './Component/Profile';
  
 
 function App() {
   return (
-    <div  >
+    <section className='DEF'>
     <Profile />
-    <Form />
+    {/* <Form /> */}
    <Forms />
-    </div>
+    </section>
   );
 }
 

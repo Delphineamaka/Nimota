@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 import Radiobtn from './Radiobtn'
 
 function Forms() {
-
-
  const [contact, setContact] = useState({
 	yName: '',
 	email: '',
@@ -23,9 +21,9 @@ function Forms() {
 
 
 
- function submitClick (){
+ function submitClick (event){
 	console.log('form submitted');
-	// event.preventDefault();
+	event.preventDefault();
  }
  
  function clearForm(){
@@ -41,7 +39,8 @@ function Forms() {
   
  
   return (
-	<div className=' App ' >
+<div className='App'>
+       
 	<form >
 	    <div className='name'>
 			<h5>Name <span className='span'>*</span></h5>
@@ -53,28 +52,23 @@ function Forms() {
 			value={contact.yName}
 			required 
 			placeholder='your answer'
- 
-		  onChange={handleChange}
-			/>
-			 
+		  onChange={handleChange}/>
 		</div>
 
-		 <div className='email'>
+		<div className='email'>
 			<label>Email <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
 			name='email'
 			value={contact.email}
-			  onChange={handleChange}
+			onChange={handleChange}
 			type='email'
 			required 
-		   placeholder='youremail@gmail.com'
-		 
-			/>
+		   placeholder='youremail@gmail.com'/>
 			 
-		 </div>
+	    </div>
 
-		 <div className='fone'>
+		<div className='fone'>
 			<label>phone number  <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
@@ -83,39 +77,32 @@ function Forms() {
 			  onChange={handleChange}
 			type='tel'
 			 required  
-			placeholder='+234...'
-
-			/>
+			placeholder='+234...'/>
 			 
-		 </div>
-        <Radiobtn />
+		</div>
+           <Radiobtn />
 
-		 <div  className = ' letter' >
-			<label>Submit your cover letter</label> <br />
+		<div  className = ' letter' >
+			<label>Submit your cover letter</label> <br/>
 			 
-			<textarea 
-			 className='cover'
-			 name='cLetter'
-			 value={contact.cLetter}
+		 <textarea 
+			className='cover'
+		    name='cLetter'
+			value={contact.cLetter}
 			rows='4'
 			cols='50'
 			required  
             placeholder='your cover letter'
-			onChange={handleChange}
-			/>
-		 </div> 
-		 <div className='btn'>
-			<button type='submit' className='submit'onClick={submitClick} >Submit</button>
-			 
-				
-			
-			
+			onChange={handleChange}/> 
+		</div> 
+	     <div className='btn'>
+			<button type='submit' className='submit'
+			onClick={submitClick} >Submit</button>
 			<input type='reset' className='reset'
-			value='clear form' onClick={clearForm}
-			 />
-		 </div>
-		 </form>
-	</div>
+			value='clear form' onClick={clearForm}/>
+	    </div>
+	</form>
+</div>
   )
 }
 

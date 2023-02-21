@@ -1,13 +1,11 @@
- 
-  
+
      .App {
        display: flex;
-      margin: 0.8rem 28rem 0.6rem 25rem;
        align-items: center;  
        justify-content: center;
        font-size: 18px;
        line-height: 1;
-       width: 40rem;
+    
 
      }
  
@@ -20,12 +18,13 @@
      padding: 8px 30% 36px 38px;
       margin: 1rem;
      border-radius: 10px;
-     width: 40rem;
-     
+    width: 50rem;
+ 
    }
 
+   
+
    .intern__heading{
-  
       text-align: center;
       justify-content: center;
       font-size: 13px;
@@ -35,18 +34,6 @@
   img{
     height: 100px;
   }
-
-  .class{
-  border-top: 10px solid #1B7C6B;
-    padding: 2px 40px 7px 40px; 
-  height: 150px;
-  width: 39.9rem;
- 
-  margin-left: 25rem;
-  font-size: 18px;
-  border-radius: 10px;
-  background: #fff;
- }
  
   input[type='radio']:after {
     width: 15px;
@@ -66,7 +53,7 @@
   }
  
   .cover{
-  width: 57%;
+    width: 57%;
      resize: none;
      overflow: hidden;
      outline: none;
@@ -76,14 +63,29 @@
        
   }
   .pro {
-
+    display: flex;
     background-color: #1E2F97;
-    padding: 1.5rem 8rem;
     border-radius: 10px;
-    margin: 0.5rem;
-   width: 42rem;
+    margin-top: 20px;
+    padding-bottom: 1.5rem;
+    width: 50rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 17.5rem;
 
   }
+
+  .pan{
+     border-radius: 10px;
+     margin-top: 20px;
+     padding: 1.5rem;
+     width: 50rem;
+     align-items: center;
+     justify-content: center;
+     margin-left: 17.5rem;
+     background-color: #fff;
+  }
+
   .Input {
     outline: none;
     border-left: hidden;
@@ -127,7 +129,7 @@
    
     display: flex;
     justify-content: space-between;
-    padding: 22px;
+    padding:  0 22px;
  
 
   }
@@ -150,46 +152,123 @@
 
 
   }
-  /* @media  screen and (max-width: 760px) {
-     .class {
-       border-top: px solid #1B7C6B;
-       padding: 70px 10px 72px 20px;
-       font-size: 16px;
-       height: 100px;
-       width: 100%;
-       margin: 4px 4px;
-       background: #fff;
-     }
+  @media screen and (width: 390px)
+  {
+    .col{
+      width: 50%;
+      margin-left: 2rem;
+    }
+  }
+  @media screen and (max-width: 540px) {
       .pro {
+       margin-left: 1rem;
+       width: 96%;
+       display: flex;
+     }
+     .pan{
+      margin-left: 1rem;
+      width: 100%;
+     }  
 
-        background-color: #1E2F97;
-        padding: 1rem 6rem 1rem;
-         border-radius: 10px;
-       margin: 0.5rem;
-        width: 100%;
-
+    
+  }
+  @media  screen and (max-width: 600px) {
+    
+       img {
+         height: 50px;
+       }
+       
+      .field{
+        padding-right: 2rem;
       }
+      
+      .pro {
+         margin-left: 1rem;
+         width: 99%;
+         display: flex;
+      }
+
+      .pan{
+         margin-left: 1rem;
+         width: 99%;
+      }
+      .letter{
+        padding-top: 32px;
+        padding-left: 14px;
+      }
+       
+       .btn {
+       display: grid;
+       grid-template-columns: 15% 35%;
+       font-size: 14px;
+
+    
+       }
+       
+       .name,
+       .email,
+       .fone,
+       .field,
+       .letter{
+        width: 100%;
+       }
+       
+       .submit{
+        height: 30px;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 4px 8px;
+       }
      
   }
-  @media screen and (min-width:768px) and(max-width: 1024px) {
-    .class {
-      border-top: px solid #1B7C6B;
-      padding: 70px 10px 72px 20px;
-      font-size: 16px;
-      height: 100px;
-      width: 100%;
-      margin: 4px 4px;
-      background: #fff;
+
+   @media screen and(max-width: 640px) {
+     .pro {
+       width: 100%;
+       display: flex;
+       margin-left: 2rem;
+
+     }
+     .pan{
+         width: 100%;
+         margin-left: 2rem;
+     }
+   }
+ 
+    @media screen and(max-width:720px) {
+      .pro {
+        width: 100%;
+        display: flex;
+        margin-left: 2rem;
+
+      }
+      .pan{
+         width: 50%;
+         margin-left: 2rem;
+      }
     }
-
-    .pro {
-
-      background-color: #1E2F97;
-      padding: 1rem 6rem 1rem;
-      border-radius: 10px;
-      margin: 0.5rem;
-      width: 100%;
-
-    }
+    
+   
+  @media screen and(max-width:992px ){
+  .pro {
+   
+    width: 90%;
+    display: flex;
+    margin-left: 2rem;
+    
   }
-  */
+  
+  }
+   @media screen and(max-width:1280px) {
+     .pro {
+       width: 100%;
+       display: flex;
+       margin-left: 2rem;
+
+     }
+     .pan{
+        width: 100%;
+        margin-right: 2rem;
+     }
+   }
+ 
