@@ -8,10 +8,12 @@ function Radiobtn() {
 	  }
   return (
 	<div className='field radioBtn' >
-			<h4 required='true'>Field<span> *</span></h4>
+	
+			<h4>Field<span className='span'> *</span></h4>
 		 <div>
 			<input type='radio' 
-			required = 'true'
+			id='radio'
+			required
 			onChange={handleChange}
 			checked={currentRadioValue === 'DevOps'}
 			 value='DevOps'/> 
@@ -42,7 +44,7 @@ function Radiobtn() {
 		  <input  type='radio'
 			value='Back-End Development'
 			onChange={handleChange}
-			checked={currentRadioValue==='Back-EndDevelopment' }
+			checked={currentRadioValue ==='Back-End Development' }
 		  />
 		  <label>Back-End Development</label>
        </div> <br />
@@ -78,12 +80,15 @@ function Radiobtn() {
 		<div>
 			<input type='radio'
 			  value='Other:' 
-			  required
 			  onChange={handleChange}
-		      checked={currentRadioValue === '0ther:'}
+		      checked={currentRadioValue === 'Other:'}
+			  
 
 			/> 
-		    <label>Other:</label> 
+		    <label>Other:</label>  
+				<input className='Input' />
+			 
+			
 		</div> 
 		
     </div>

@@ -1,67 +1,67 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
+// import axios from 'axios'
 import Radiobtn from './Radiobtn'
 
+
 function Forms() {
- const [contact, setContact] = useState({
-	yName: '',
-	email: '',
-	telephone: '',
-	cLetter: ''
+	const inputRef = useRef();
+	// const errRef = useRef();
+	 
 
- })
- function handleChange(event){
-	const {name, value} = event.target;
-	setContact((preValue) =>{
-		return{
-			...preValue,
-			[name]: value
-		}
-	})
+  const[user, setUser] = useState('')
+   const [email, setEmail] = useState('')
+    const [tel, setTel] = useState('')
+	const [cLetter, setCletter] = useState('')
+	const [success, setSuccess] = useState(false);
+
+	useEffect(() =>{
+     inputRef.current.focus()
+	}, []);
+
+
+ const handleSubmit =   async (e) =>{
+	e.preventDefault();
+	console.log(user, email, tel);
+	 setSuccess(true)
+	 
+   
  }
-
-
-
- function submitClick (event){
-	console.log('form submitted');
-	event.preventDefault();
- }
- 
- function clearForm(){
-	setContact({
-		yName: '',
-	    email: '',
-	    telephone: '',
-	    cLetter: ''
-
-
-	})
- }
-  
- 
+   
   return (
+	<>
+	 {success ? (
+                <section>
+                    <h1 style={{textAlign: 'center', just
+					: 'center', fontSize: '35px'}}>YOU <i>HAVE SUBMITTED YOUR FORM</i></h1>
+                    
+                </section>
+            ) : (
 <div className='App'>
        
-	<form >
+	<form onSubmit={handleSubmit} >
 	    <div className='name'>
 			<h5>Name <span className='span'>*</span></h5>
-			<label>First and last name</label> <br />
+			<label htmlFor='username'>First and last name</label> <br />
 			<input 
+			ref={inputRef}
 			className='Input'
+			id='username'
 			type='text'
-			name='yName'
-			value={contact.yName}
+			name='user'
+			value={user}
 			required 
-			placeholder='your answer'
-		  onChange={handleChange}/>
+			placeholder='your name....'
+		     onChange={(e) =>{setUser(e.target.value)}}/>
 		</div>
 
 		<div className='email'>
-			<label>Email <span className='span'>*</span></label> <br />
+			<label htmlFor='email'>Email <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
+			id='email'
 			name='email'
-			value={contact.email}
-			onChange={handleChange}
+			value={email}
+			onChange={(e) =>{setEmail(e.target.value)}}
 			type='email'
 			required 
 		   placeholder='youremail@gmail.com'/>
@@ -69,13 +69,14 @@ function Forms() {
 	    </div>
 
 		<div className='fone'>
-			<label>phone number  <span className='span'>*</span></label> <br />
+			<label htmlFor='telephone'>phone number  <span className='span'>*</span></label> <br />
 			<input 
 			className = 'Input'
-			name='telephone'
-			value={contact.telephone}
-			  onChange={handleChange}
-			type='tel'
+			id='telephone'
+			name='tel'
+			value={tel}
+		onChange={(e) =>{setTel(e.target.value)}}
+			type='number'
 			 required  
 			placeholder='+234...'/>
 			 
@@ -87,23 +88,33 @@ function Forms() {
 			 
 		 <textarea 
 			className='cover'
+			id='cLetter'
 		    name='cLetter'
-			value={contact.cLetter}
+		    value={cLetter}
+			onChange={(event) =>{setCletter(event.target.value)}}
 			rows='4'
 			cols='50'
 			required  
             placeholder='your cover letter'
-			onChange={handleChange}/> 
+			/> 
 		</div> 
 	     <div className='btn'>
-			<button type='submit' className='submit'
-			onClick={submitClick} >Submit</button>
+			<button type='submit' className='submit' 
+			  >Submit</button>
 			<input type='reset' className='reset'
-			value='clear form' onClick={clearForm}/>
+			value='clear form'
+			 
+
+			 />
 	    </div>
 	</form>
+	
 </div>
+)
+	 }
+</>
   )
+  
 }
 
 export default Forms;

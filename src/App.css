@@ -1,12 +1,9 @@
-
-     .App {
+ .App {
        display: flex;
        align-items: center;  
        justify-content: center;
        font-size: 18px;
        line-height: 1;
-    
-
      }
  
    .name,
@@ -19,10 +16,7 @@
       margin: 1rem;
      border-radius: 10px;
     width: 50rem;
- 
    }
-
-   
 
    .intern__heading{
       text-align: center;
@@ -94,23 +88,20 @@
     font-size: 1rem;
     background: none;
     border-bottom: 0.1px solid gray;
-
-
   }
+
   .Input:focus,
   .cover:focus,
-
-  .Input:active {
+  .Input:active{
     border-bottom: 2px solid #1B7C6B;
     transition: 0.1s ease-in;
   }
-
+ 
   .span {
     color: red;
     font-size: 22px;
   }
   
-
   input[type='radio']:checked:after {
     width: 15px;
     height: 15px;
@@ -133,6 +124,7 @@
  
 
   }
+  
   .reset {
     color: #1B7C6B;
     font-size: 18px;
@@ -149,13 +141,52 @@
     font-size: 18px;
     border: none;
     padding: 8px 38px;
+  }
 
+  .instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+  }
 
+  .instructions>svg {
+    margin-right: 0.25rem;
+  }
+
+  .offscreen {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+  }
+
+  .invalid {
+    color: red;
+    margin-left: 0.25rem;
+  }
+
+  .errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   @media screen and (width: 390px)
   {
     .col{
-      width: 50%;
+      width: 100%;
       margin-left: 2rem;
     }
   }
