@@ -14,9 +14,7 @@ function Forms() {
 	const [cLetter, setCletter] = useState('')
 	const [success, setSuccess] = useState(false);
 
-	useEffect(() =>{
-     inputRef.current.focus()
-	}, []);
+	useEffect(() => inputRef.current.focus(), []);
 
 
  const handleSubmit =   async (e) =>{
